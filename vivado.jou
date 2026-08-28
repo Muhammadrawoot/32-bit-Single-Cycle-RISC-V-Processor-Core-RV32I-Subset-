@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Aug 29 00:54:59 2026
+# Process ID: 7132
+# Current directory: C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2028 C:\Users\Hamzaa\Desktop\PROJECT\RISC_V_SINGLE_CYCLE\RISCV_Single_Cycle_Core\RISCV_Single_Cycle_Core.xpr
+# Log file: C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core/vivado.log
+# Journal file: C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core\vivado.jou
+# Running On: Muhammad, OS: Windows, CPU Frequency: 1382 MHz, CPU Physical cores: 4, Host memory: 8316 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core/RISCV_Single_Cycle_Core.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source Single_Cycle_TB.tcl
+current_wave_config {Untitled 1}
+add_wave {{/Single_Cycle_TB/uut/PC}} {{/Single_Cycle_TB/uut/PC_Next}} {{/Single_Cycle_TB/uut/PC_Plus_4}} {{/Single_Cycle_TB/uut/PC_Target}} {{/Single_Cycle_TB/uut/Instr}} {{/Single_Cycle_TB/uut/Read_Data_1}} {{/Single_Cycle_TB/uut/Read_Data_2}} {{/Single_Cycle_TB/uut/Write_Data_Reg}} {{/Single_Cycle_TB/uut/Imm_Out}} {{/Single_Cycle_TB/uut/SrcB}} {{/Single_Cycle_TB/uut/ALU_Result}} {{/Single_Cycle_TB/uut/Read_Data_Mem}} {{/Single_Cycle_TB/uut/Zero}} {{/Single_Cycle_TB/uut/RegWrite}} {{/Single_Cycle_TB/uut/ALUSrc}} {{/Single_Cycle_TB/uut/MemWrite}} {{/Single_Cycle_TB/uut/MemRead}} {{/Single_Cycle_TB/uut/MemToReg}} {{/Single_Cycle_TB/uut/Branch}} {{/Single_Cycle_TB/uut/ALUControl}} {{/Single_Cycle_TB/uut/PCSrc}} 
+restart
+run all
+close_sim
+launch_simulation
+source Single_Cycle_TB.tcl
+current_wave_config {Untitled 2}
+add_wave {{/Single_Cycle_TB/uut/PC}} {{/Single_Cycle_TB/uut/PC_Next}} {{/Single_Cycle_TB/uut/PC_Plus_4}} {{/Single_Cycle_TB/uut/PC_Target}} {{/Single_Cycle_TB/uut/Instr}} {{/Single_Cycle_TB/uut/Read_Data_1}} {{/Single_Cycle_TB/uut/Read_Data_2}} {{/Single_Cycle_TB/uut/Write_Data_Reg}} {{/Single_Cycle_TB/uut/Imm_Out}} {{/Single_Cycle_TB/uut/SrcB}} {{/Single_Cycle_TB/uut/ALU_Result}} {{/Single_Cycle_TB/uut/Read_Data_Mem}} {{/Single_Cycle_TB/uut/Zero}} {{/Single_Cycle_TB/uut/RegWrite}} {{/Single_Cycle_TB/uut/ALUSrc}} {{/Single_Cycle_TB/uut/MemWrite}} {{/Single_Cycle_TB/uut/MemRead}} {{/Single_Cycle_TB/uut/MemToReg}} {{/Single_Cycle_TB/uut/Branch}} {{/Single_Cycle_TB/uut/ALUControl}} {{/Single_Cycle_TB/uut/PCSrc}} 
+current_wave_config {Untitled 2}
+add_wave {{/Single_Cycle_TB/uut/clk}} {{/Single_Cycle_TB/uut/reset}} {{/Single_Cycle_TB/uut/PC}} {{/Single_Cycle_TB/uut/PC_Next}} {{/Single_Cycle_TB/uut/PC_Plus_4}} {{/Single_Cycle_TB/uut/PC_Target}} {{/Single_Cycle_TB/uut/Instr}} {{/Single_Cycle_TB/uut/Read_Data_1}} {{/Single_Cycle_TB/uut/Read_Data_2}} {{/Single_Cycle_TB/uut/Write_Data_Reg}} {{/Single_Cycle_TB/uut/Imm_Out}} {{/Single_Cycle_TB/uut/SrcB}} {{/Single_Cycle_TB/uut/ALU_Result}} {{/Single_Cycle_TB/uut/Read_Data_Mem}} {{/Single_Cycle_TB/uut/Zero}} {{/Single_Cycle_TB/uut/RegWrite}} {{/Single_Cycle_TB/uut/ALUSrc}} {{/Single_Cycle_TB/uut/MemWrite}} {{/Single_Cycle_TB/uut/MemRead}} {{/Single_Cycle_TB/uut/MemToReg}} {{/Single_Cycle_TB/uut/Branch}} {{/Single_Cycle_TB/uut/ALUControl}} {{/Single_Cycle_TB/uut/PCSrc}} 
+restart
+run all
+close_sim
+launch_simulation
+source Single_Cycle_TB.tcl
+current_wave_config {Untitled 3}
+add_wave {{/Single_Cycle_TB/uut/PC}} {{/Single_Cycle_TB/uut/PC_Next}} {{/Single_Cycle_TB/uut/PC_Plus_4}} {{/Single_Cycle_TB/uut/PC_Target}} {{/Single_Cycle_TB/uut/Instr}} {{/Single_Cycle_TB/uut/Read_Data_1}} {{/Single_Cycle_TB/uut/Read_Data_2}} {{/Single_Cycle_TB/uut/Write_Data_Reg}} {{/Single_Cycle_TB/uut/Imm_Out}} {{/Single_Cycle_TB/uut/SrcB}} {{/Single_Cycle_TB/uut/ALU_Result}} {{/Single_Cycle_TB/uut/Read_Data_Mem}} {{/Single_Cycle_TB/uut/Zero}} {{/Single_Cycle_TB/uut/RegWrite}} {{/Single_Cycle_TB/uut/ALUSrc}} {{/Single_Cycle_TB/uut/MemWrite}} {{/Single_Cycle_TB/uut/MemRead}} {{/Single_Cycle_TB/uut/MemToReg}} {{/Single_Cycle_TB/uut/Branch}} {{/Single_Cycle_TB/uut/ALUControl}} {{/Single_Cycle_TB/uut/PCSrc}} 
+restart
+run all

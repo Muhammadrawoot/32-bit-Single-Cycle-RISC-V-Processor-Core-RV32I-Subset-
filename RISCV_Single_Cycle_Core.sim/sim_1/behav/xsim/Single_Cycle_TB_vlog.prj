@@ -5,8 +5,7 @@ verilog xil_defaultlib  \
 "../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/Data_Memory.v" \
 "../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/Imm_Gen.v" \
 "../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/Instruction_Memory.v" \
-"../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/PC_Adder.v" \
-"../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/PC_Module.v" \
+"../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/MAC_Unit.v" \
 "../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/Register_File.v" \
 "../../../../RISCV_Single_Cycle_Core.srcs/sources_1/new/Single_Cycle_Top.v" \
 "../../../../RISCV_Single_Cycle_Core.srcs/sim_1/new/Single_Cycle_TB.v" \

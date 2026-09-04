@@ -20,30 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    input wire [31:0] A,
-    input wire [31:0] B,
+
+module ALU (
+    input wire [31:0] SrcA,
+    input wire [31:0] SrcB,
     input wire [3:0] ALUControl,
-    output reg [31:0] Result,
+    output reg [31:0] ALU_Result,
     output wire Zero
 );
 
     always @(*) begin
-        case(ALUControl)
-            4'b0000: Result = A & B;               // AND
-            4'b0001: Result = A | B;               // OR
-            4'b0010: Result = A + B;               // ADD
-            4'b0110: Result = A - B;               // SUB
-            4'b0111: Result = ($signed(A) < $signed(B)) ? 32'd1 : 32'd0; // SLT (Set Less Than)
-            4'b0011: Result = A ^ B;               // XOR
-            4'b0100: Result = A << B[4:0];         // SLL (Shift Left Logical)
-            4'b0101: Result = A >> B[4:0];         // SRL (Shift Right Logical)
-            4'b1000: Result = $signed(A) >>> B[4:0]; // SRA (Shift Right Arithmetic)
-            default: Result = 32'h00000000;
+        case (ALUControl)
+            4'b0000: ALU_Result = SrcA & SrcB;                    // AND
+            4'b0001: ALU_Result = SrcA | SrcB;                    // OR
+            4'b0010: ALU_Result = SrcA + SrcB;                    // ADD
+            4'b0110: ALU_Result = SrcA - SrcB;                    // SUB
+            4'b0111: ALU_Result = ($signed(SrcA) < $signed(SrcB)) ? 32'd1 : 32'd0; // SLT
+            default: ALU_Result = 32'h00000000;
         endcase
     end
 
-    // The Zero flag is 1 if the Result is exactly 0
-    assign Zero = (Result == 32'h00000000);
+    // Zero flag set high when ALU output is 0 (used for BEQ branches)
+    assign Zero = (ALU_Result == 32'h00000000) ? 1'b1 : 1'b0;
 
 endmodule

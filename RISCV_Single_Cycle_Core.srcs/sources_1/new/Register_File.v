@@ -19,35 +19,34 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module Register_File(
+module Register_File (
     input wire clk,
     input wire reset,
     input wire RegWrite,
-    input wire [4:0] rs1,           // Source Register 1 index
-    input wire [4:0] rs2,           // Source Register 2 index
-    input wire [4:0] rd,            // Destination Register index
-    input wire [31:0] Write_Data,    // Data to write into rd
-    output wire [31:0] Read_Data_1,  // Output value from rs1
-    output wire [31:0] Read_Data_2   // Output value from rs2
+    input wire [4:0] Read_Reg_1,
+    input wire [4:0] Read_Reg_2,
+    input wire [4:0] Write_Reg,
+    input wire [31:0] Write_Data,
+    output wire [31:0] Read_Data_1,
+    output wire [31:0] Read_Data_2
 );
 
-    // 32 registers, each 32 bits wide
     reg [31:0] registers [0:31];
-
-    // Synchronous Write Logic
     integer i;
+
+    // Synchronous write (x0 is hardwired to 0)
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             for (i = 0; i < 32; i = i + 1) begin
                 registers[i] <= 32'h00000000;
             end
-        end else if (RegWrite && (rd != 5'b00000)) begin
-            registers[rd] <= Write_Data;
+        end else if (RegWrite && (Write_Reg != 5'd0)) begin
+            registers[Write_Reg] <= Write_Data;
         end
     end
 
-    // Asynchronous Read Logic (x0 is hardwired to 0)
-    assign Read_Data_1 = (rs1 == 5'b00000) ? 32'h00000000 : registers[rs1];
-    assign Read_Data_2 = (rs2 == 5'b00000) ? 32'h00000000 : registers[rs2];
+    // Combinational read
+    assign Read_Data_1 = (Read_Reg_1 == 5'd0) ? 32'h00000000 : registers[Read_Reg_1];
+    assign Read_Data_2 = (Read_Reg_2 == 5'd0) ? 32'h00000000 : registers[Read_Reg_2];
 
 endmodule

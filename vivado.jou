@@ -36,3 +36,7 @@ current_wave_config {Untitled 3}
 add_wave {{/Single_Cycle_TB/uut/PC}} {{/Single_Cycle_TB/uut/PC_Next}} {{/Single_Cycle_TB/uut/PC_Plus_4}} {{/Single_Cycle_TB/uut/PC_Target}} {{/Single_Cycle_TB/uut/Instr}} {{/Single_Cycle_TB/uut/Read_Data_1}} {{/Single_Cycle_TB/uut/Read_Data_2}} {{/Single_Cycle_TB/uut/Write_Data_Reg}} {{/Single_Cycle_TB/uut/Imm_Out}} {{/Single_Cycle_TB/uut/SrcB}} {{/Single_Cycle_TB/uut/ALU_Result}} {{/Single_Cycle_TB/uut/Read_Data_Mem}} {{/Single_Cycle_TB/uut/Zero}} {{/Single_Cycle_TB/uut/RegWrite}} {{/Single_Cycle_TB/uut/ALUSrc}} {{/Single_Cycle_TB/uut/MemWrite}} {{/Single_Cycle_TB/uut/MemRead}} {{/Single_Cycle_TB/uut/MemToReg}} {{/Single_Cycle_TB/uut/Branch}} {{/Single_Cycle_TB/uut/ALUControl}} {{/Single_Cycle_TB/uut/PCSrc}} 
 restart
 run all
+save_wave_config {C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core/Single_Cycle_TB_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core/Single_Cycle_TB_behav.wcfg
+set_property xsim.view C:/Users/Hamzaa/Desktop/PROJECT/RISC_V_SINGLE_CYCLE/RISCV_Single_Cycle_Core/Single_Cycle_TB_behav.wcfg [get_filesets sim_1]
+close_sim
